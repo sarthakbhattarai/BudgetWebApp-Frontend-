@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="/budgetLogin.css" />
+    <link rel="shortcut icon" href="/budget logo.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget</title>
+  </head>
+
+  
+  <body>
+    <nav style="height: 90px">
+      <!-- <img class="logoJPG" src="/budget logo.jpg" alt="logo" /> -->
+      <p class="logoWrite">Budget Expenses</p>
+    </nav>
+  
+    <section>
+      <div class="login">
+        <div class="form">
+          <div class="button-box">
+            <div id="btn"></div>
+            <button class="toggle" onclick="Login()">Log-In</button>
+            <button class="toggle" onclick="Register()">Register</button>
+          </div>
+          <form action="login.php" method="post" id="Login" class="input">
+            <input
+              class="intpu-1"
+              type="email"
+              name="Username"
+              placeholder="Username"
+              required
+              id="Username"
+            />
+            <br />
+            <input
+              class="intpu-1"
+              type="password"
+              name="Password"
+              placeholder="Password"
+              required
+              id="Password"
+            />
+            <br />
+            <input class="intput-2" type="checkbox" /><span
+              style="background-color: floralwhite"
+              >Remember me</span
+            >
+            <button
+              class="submit-btn"
+              onclick="location.href='http://127.0.0.1:5500/budget.html'"
+            >
+              Log-In
+            </button>
+          </form>
+
+          <form action="register.php" method="post" id="Register" class="input">
+            <input
+              class="intpu-1"
+              type="text"
+              name="Username"
+              placeholder="Username"
+              required
+              id="Username"
+            />
+            <br />
+            <input
+              class="intpu-1"
+              type="email"
+              name="email"
+              placeholder="E-mail Id"
+              required
+              id="emailid"
+            />
+            <br />
+            <input
+              class="intpu-1"
+              type="Phone"
+              name="Phone"
+              placeholder="Phone"
+              required
+              id="Phone"
+            />
+            <br />
+            <input
+              class="intpu-1"
+              type="password"
+              name="Password"
+              placeholder="Password"
+              required
+              id="Password"
+            />
+            <br />
+            <input class="intput-2" type="checkbox" /><span
+              style="background-color: floralwhite"
+              >Agree trems and condition</span
+            >
+            <button
+              class="submit-btn"
+              onclick="location.href='http://127.0.0.1:5501/verification.html'"
+            >
+              Register
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <script>
+      var x = document.getElementById("Login");
+      var y = document.getElementById("Register");
+      var z = document.getElementById("btn");
+
+      function Register() {
+        x.style.left = "389px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function Login() {
+        x.style.left = "50px";
+        y.style.left = "-339px";
+        z.style.left = "0px";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,91 @@
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Budget</title>
+    <!-- Font Awesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="budget.css" />
+
+    <link rel="shortcut icon" href="/budget logo.jpg" type="image/x-icon" />
+  </head>
+
+  <body>
+    <nav style="height: 90px">
+      <!-- <img class="logoJPG" src="/budget logo.jpg" alt="logo" /> -->
+      <p class="logoWrite">Budget Expenses</p>
+    </nav>
+  
+    <div class="wrapper">
+      <div class="container">
+        <div class="sub-container">
+          <!-- Budget -->
+          <div class="total-amount-container">
+            <h3>Budget</h3>
+            <p class="hide error" id="budget-error">
+              value cannot be empty or negative
+            </p>
+            <input
+              type="number"
+              name="total_amount"
+              id="total-amount"
+              placeholder="Enter Total Amount"
+            />
+            <button class="submit" style="background-color: #bdecf1; color: rgb(91, 88, 88);" id="total-amount-button">Set Budget</button>
+          </div>
+          <!-- Expenditure -->
+          <div class="user-amount-container">
+            <h3>Expenses</h3>
+            <p class="hide error" id="product-title-error">
+              Values cannot be empty
+            </p>
+            <input
+              type="text"
+              class="product-title"
+              name="product_title"
+              id="product-title"
+              placeholder="Enter Title of Product"
+            />
+            <input
+              type="number"
+              name="product_cost"
+              id="user-amount"
+              placeholder="Enter Cost of Product"
+            />
+            <button class="submit" style="background-color: #bdecf1; color: rgb(91, 88, 88);" id="check-amount">Check Amount</button>
+          </div>
+        </div>
+        <!-- Output -->
+        <div class="output-container flex-space" style="background-color: #bdecf1; color: rgb(91, 88, 88);">
+          <div>
+            <p>Total Budget</p>
+            <span id="amount" style="color: rgb(91, 88, 88);">0</span>
+          </div>
+          <div>
+            <p>Expenses</p>
+            <span id="expenditure-value" style="color: rgb(91, 88, 88);">0</span>
+          </div>
+          <div>
+            <p>Balance</p>
+            <span id="balance-amount" style="color: rgb(91, 88, 88);">0</span>
+          </div>
+        </div>
+      </div>
+      <!-- List -->
+      <div class="list" >
+        <h3>Expense List</h3>
+        <div class="list-container" id="list"></div>
+      </div>
+    </div>
+    <!-- Script -->
+    <script src="budjet.js"></script>
+  </body>
+</html>
